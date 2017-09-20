@@ -103,7 +103,7 @@
         <div id="focus" class="btn-group">
           <button class="btn col-sm-120" data-toggle="dropdown" data-hover="dropdown"><b class="caret"></b><span class="selected">Focus Tune</span></button>
           <ul class="dropdown-menu">
-            <li><a tabindex="-1" href="#">Contact</a></li>
+            <li><a href="#"></a></li>
           </ul>
         </div>
       </div>
@@ -112,15 +112,13 @@
         <div id="relax" class="btn-group">
           <button class="btn" data-toggle="dropdown" data-hover="dropdown"><b class="caret"></b><span class="selected">Relaxing Tune</span></button>
           <ul class="dropdown-menu">
-            <li>Contact</li>
-            <li><a tabindex="-1" href="#">Contact</a></li>
-            <li><a tabindex="-1" href="#">Contact</a></li>
-            <li><a tabindex="-1" href="#">Contact</a></li>
+            <li><a href="#"></a></li>
           </ul>
         </div>
       </div>
 
-      <button type="button" name="playbutton" onclick="play();">Play</button>
+      <button type="button" name="playbutton" onclick="playSound();">Play</button>
+      <button type="button" name="resetbutton" onclick="resetSound();">Reset</button>
       <audio id="soundplayer" autoplay loop>
       </audio>
 
