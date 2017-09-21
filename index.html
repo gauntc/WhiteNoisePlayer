@@ -35,16 +35,24 @@
           padding-top: 56px;
         }
       }
-      
+
       body {
-        background-image: url("https://photos.smugmug.com/StarTrails/i-fJVzGwN/0/9ca92646/L/GreatBasinPerseids2015-L.jpg");
-} 
+        height:100%;
+        width:100%;
+        background-image:url(https://photos.smugmug.com/StarTrails/i-fJVzGwN/0/9ca92646/L/GreatBasinPerseids2015-L.jpg);/*your background image*/
+        background-repeat:no-repeat;/*we want to have one single image not a repeated one*/
+        background-size:cover;/*this sets the image to fullscreen covering the whole screen*/
+       /*css hack for ie*/
+       filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(url="https://photos.smugmug.com/StarTrails/i-fJVzGwN/0/9ca92646/L/GreatBasinPerseids2015-L.jpg"),sizingMethod='scale');
+       -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(url="https://photos.smugmug.com/StarTrails/i-fJVzGwN/0/9ca92646/L/GreatBasinPerseids2015-L.jpg"),sizingMethod='scale')";
+    }
       h2 {
- color: white;
- font-family: verdana;
- font-size: 56px;
-}
-      
+         color: white;
+         font-family: verdana;
+         font-size: 56px;
+      }
+
+
     </style>
 
   </head>
@@ -78,23 +86,26 @@
         </div>
       </div>
 
-      <div class="col-lg-12 text-center">
-        <div id="focus" class="btn-group">
-          <button class="btn col-sm-120" data-toggle="dropdown" data-hover="dropdown"><b class="caret"></b><span class="selected">Focus Tune</span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#"></a></li>
-          </ul>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div id="focus" class="btn-group">
+            <button class="btn col-sm-120" data-toggle="dropdown" data-hover="dropdown"><b class="caret"></b><span class="selected">Focus Tune</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-12 text-center">
+          <div id="relax" class="btn-group">
+            <button class="btn" data-toggle="dropdown" data-hover="dropdown"><b class="caret"></b><span class="selected">Relaxing Tune</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#"></a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="col-lg-12 text-center">
-        <div id="relax" class="btn-group">
-          <button class="btn" data-toggle="dropdown" data-hover="dropdown"><b class="caret"></b><span class="selected">Relaxing Tune</span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#"></a></li>
-          </ul>
-        </div>
-     
 
       <button type="button" name="playbutton" onclick="playSound();">Play</button>
       <button type="button" name="resetbutton" onclick="resetSound();">Reset</button>
